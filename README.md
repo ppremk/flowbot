@@ -1,4 +1,6 @@
-# Cloned and extended from electron-quick-start
+## WIP Courseflow Generator for Learning Lab courses
+
+## Cloned and extended from electron-quick-start
 
 ## To Use
 
@@ -14,6 +16,14 @@ npm install
 # Run the app
 npm start
 ```
+
+```
+# To add new item
+Hit 'a' on the keyboard
+# To remove all items
+Hit 'c' on the keyboard
+```
+
 
 ## License
 
