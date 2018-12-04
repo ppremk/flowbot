@@ -1,24 +1,23 @@
 {
-  "name": "electron-quick-start",
+  "name": "flowbot",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Learning Lab Course Flow generator",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/ppremk/flowbot",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "flowbot",
+    "learning",
+    "lab"
   ],
-  "author": "GitHub",
+  "author": "ppremk",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^3.0.7"
   },
   "dependencies": {
+    "bootstrap": "^4.1.3"
   }
 }
