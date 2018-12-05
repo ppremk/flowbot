@@ -45,7 +45,7 @@ ipcMain.on('keyuptrigger-a', function (e) {
 // code. You can also put them in separate files and require them here.
 
 function createAddWindow () {
-  addWindow = new BrowserWindow({width: 400, height: 300, title:'Add Step Item'})
+  addWindow = new BrowserWindow({width: 550, height: 700, title:'Add Step Item'})
   addWindow.loadFile('addWindow.html')
   addWindow.on('closed', function () {
       addWindow = null
