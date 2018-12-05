@@ -20,7 +20,8 @@ function dealWithKeyboard(e) {
     }        
 }
 
-const ul = document.querySelector('ul');
+const ul = document.getElementById('courseSteps');
+// const ul = document.querySelector('ul');
 
 ipcRenderer.on('item:add', function(e, item){
   ul.className = 'list-group';

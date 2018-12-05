@@ -7,7 +7,7 @@ let mainWindow
 let addWindow
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 900, height: 1500})
   mainWindow.loadFile('index.html')
   mainWindow.on('closed', function () {
     mainWindow = null
