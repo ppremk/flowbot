@@ -2,82 +2,70 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+    <title>FlowBot!</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">            
   </head>
   <body>
-    <div class="container">
-    
-    <nav>
-      <div class="nav-wrapper">
-        <a class="brand-logo center">Course Flow</a>   
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+          <h1 class="display-6">Proposed Course Flow</h1>
+          <p class="lead">press <kbd>a</kbd> on the keyboard to add steps, press <kbd>c</kbd> to clear all steps, <kbd>double click</kbd> on a step to remove it from the list</p>
+        </div>     
       </div>
-    </nav>
+      <div class="row">
+        <div class="col-5">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <ul class="list-group">
+              <li class="list-group-item">Step 1</li>
+              <li class="list-group-item">Step 2</li>
+              <li class="list-group-item">Step 3</li>
+              <li class="list-group-item">Step 4</li>
+              <li class="list-group-item">Step 5</li>
+            </ul>
+          </div>
+        </div>
+      </div>        
+      <div class="row">
+        <div class="col-10">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="images/bot.png" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+              <li class="media my-4">
+                <img class="mr-3" src="images/branch.png" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+              <li class="media">
+                <img class="mr-3" src="images/user.png" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>        
 
-    <ul class="collection">
-
-      <li class="collection-item avatar">
-        <img src="images/bot.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/branch.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/user.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/activity.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/pr.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-    </ul>
-
-    <a class="waves-effect waves-light btn-large"><i class="material-icons right">code</i>Generate Config yml</a>
-
+      <div class="row">
+        <button type="button" class="btn btn-primary btn-lg">Generate config yml</button>
+      </div>
     </div>
 
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
+      require('./node_modules/bootstrap/dist/js/bootstrap.js')
     </script>
-
   </body>
 </html>
