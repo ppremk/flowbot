@@ -20,12 +20,13 @@ function dealWithKeyboard(e) {
     }        
 }
 
-const ul = document.querySelector('ul');
+const ul = document.getElementById('courseSteps');
+// const ul = document.querySelector('ul');
 
 ipcRenderer.on('item:add', function(e, item){
-  ul.className = 'collection';
+  ul.className = 'list-group';
   const li = document.createElement('li');
-  li.className = 'collection-item avatar';
+  li.className = 'list-group-item';
   const itemText = document.createTextNode(item);
   li.appendChild(itemText);
   ul.appendChild(li);

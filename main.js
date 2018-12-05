@@ -7,7 +7,7 @@ let mainWindow
 let addWindow
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 900, height: 1500})
   mainWindow.loadFile('index.html')
   mainWindow.on('closed', function () {
     mainWindow = null
@@ -45,7 +45,7 @@ ipcMain.on('keyuptrigger-a', function (e) {
 // code. You can also put them in separate files and require them here.
 
 function createAddWindow () {
-  addWindow = new BrowserWindow({width: 400, height: 300, title:'Add Step Item'})
+  addWindow = new BrowserWindow({width: 550, height: 700, title:'Add Step Item'})
   addWindow.loadFile('addWindow.html')
   addWindow.on('closed', function () {
       addWindow = null

@@ -2,82 +2,127 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+    <title>FlowBot!</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">            
   </head>
   <body>
-    <div class="container">
-    
-    <nav>
-      <div class="nav-wrapper">
-        <a class="brand-logo center">Course Flow</a>   
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <h1 class="display-6">Proposed Course Flow</h1>
+            <p class="lead">press <kbd>a</kbd> on the keyboard to add steps, press <kbd>c</kbd> to clear all steps, <kbd>double click</kbd> on a step to remove it from the list</p>
+          </div>        
+        </div>     
       </div>
-    </nav>
-
-    <ul class="collection">
-
-      <li class="collection-item avatar">
-        <img src="images/bot.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/branch.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/user.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/activity.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-      <li class="collection-item avatar">
-        <img src="images/pr.png" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-          Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-
-    </ul>
-
-    <a class="waves-effect waves-light btn-large"><i class="material-icons right">code</i>Generate Config yml</a>
-
+      <div class="row">
+        <div class="col-12">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <form>
+              <div class="form-group row">
+                <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-10">
+                  <input type="input" class="form-control" id="inputTitle" placeholder="course title">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputTagLine" class="col-sm-2 col-form-label">Tagline</label>
+                <div class="col-sm-10">
+                  <input type="input" class="form-control" id="inputTagLine" placeholder="tagline">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" id="inputDescription" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputTags" class="col-sm-2 col-form-label">Tagline</label>
+                <div class="col-sm-10">
+                  <input type="input" class="form-control" id="inputTags" placeholder="tagline">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="tagsDescription" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">  
+                  <span class="badge badge-pill badge-secondary">tag1</span>
+                  <span class="badge badge-pill badge-secondary">tag2</span>
+                  <span class="badge badge-pill badge-secondary">tag3</span>
+                  <span class="badge badge-pill badge-secondary">tag4</span>
+                  <span class="badge badge-pill badge-secondary">tag5</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputTemplate" class="col-sm-2 col-form-label">Template</label>
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="InputTemplateName">Name</label>
+                    <input type="text" class="form-control" id="InputTemplateName" placeholder="template-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="InputRepo">Repository</label>
+                    <input type="text" class="form-control" id="InputRepo" placeholder="template repo name">
+                  </div>
+                </div>                            
+              </div>
+              <div class="form-group row">
+                <label for="beforeSection" class="col-sm-2 col-form-label">Before</label>
+                <div class="col-sm-10">  
+                  <ul class="list-group" id="beforeSteps">
+                    <li class="list-group-item">Step 1</li>
+                    <li class="list-group-item">Step 2</li>
+                  </ul>
+                </div>
+              </div>                        
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary float-right">Update Section</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>      
+      <div class="row">
+        <div class="col-12">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <form>
+                <div class="form-group row">
+                  <label for="stepsSection" class="col-sm-2 col-form-label">Steps</label>
+                  <div class="col-sm-10">
+                    <ul class="list-group" id="courseSteps">
+                      <li class="list-group-item">Step 1</li>
+                      <li class="list-group-item">Step 2</li>
+                      <li class="list-group-item">Step 3</li>
+                      <li class="list-group-item">Step 4</li>
+                      <li class="list-group-item">Step 5</li>
+                    </ul>
+                  </div>
+                </div>          
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary float-right">Update Section</button>
+                </div>
+              </div>          
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="col-sm-12 shadow-lg p-3 mb-5 bg-white rounded float-right">
+            <button type="button" class="btn btn-primary btn-lg">Generate config yml</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
+      require('./node_modules/bootstrap/dist/js/bootstrap.js')
     </script>
-
   </body>
 </html>
